@@ -4,6 +4,7 @@ import { useState } from "react";
 // Componentes
 import MenuGeneral from "../components/menu-general/menuGeneral";
 import MenuTexto from "../components/menu-texto/menuTexto";
+import Texto from "@/components/texto/texto";
 import estilo from "./estilo.json";
 
 export default function Home() {
@@ -22,12 +23,7 @@ export default function Home() {
       style={{background: fondo, color: texto}}>
       <MenuGeneral secundario={secundario} cambiarEstilo={cambiarEstilo}/>
       <div className="w-[60%]">
-        <MenuTexto primario={primario} secundario={textoBajo}/>
-        <div className="h-screen mt-10 rounded-md shadow-md p-2" style={{
-          background: hoja
-        }}>
-          Texto: {estilo.dark.primario}
-        </div>
+        <MenuTexto primario={primario} secundario={textoBajo} hoja={hoja}/>
       </div>
     </div>
   );
