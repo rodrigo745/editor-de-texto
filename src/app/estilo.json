@@ -5,6 +5,7 @@
         "secundario": "#77726E",
         "fondo": "#CACBCD",
         "texto": "#323841",
+        "textoBajo": "#777",
         "hoja": "#F6F2EE"
     },
     "dark": {
@@ -13,6 +14,7 @@
         "secundario": "#77726E",
         "fondo": "#323841",
         "texto": "#F6F2EE",
+        "textoBajo": "#bbb",
         "hoja": "#B3B9C1"
     }
 }

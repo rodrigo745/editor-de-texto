@@ -9,7 +9,7 @@ import estilo from "./estilo.json";
 export default function Home() {
 
   const [ estiloGeneral, setEstiloGeneral ] = useState(estilo.light);
-  const { id, primario, secundario, fondo, texto, hoja } = estiloGeneral;
+  const { id, primario, secundario, fondo, texto, textoBajo, hoja } = estiloGeneral;
 
   // Switch style
   const cambiarEstilo = (e)=>{
@@ -22,7 +22,7 @@ export default function Home() {
       style={{background: fondo, color: texto}}>
       <MenuGeneral secundario={secundario} cambiarEstilo={cambiarEstilo}/>
       <div className="w-[60%]">
-        <MenuTexto primario={primario}/>
+        <MenuTexto primario={primario} secundario={textoBajo}/>
         <div className="h-screen mt-10 rounded-md shadow-md p-2" style={{
           background: hoja
         }}>
