@@ -36,6 +36,7 @@ export default function MenuTexto({primario, texto, secundario, hoja}){
         <div>
             <div className="h-[20vh] w-full rounded-md shadow-sm p-2" 
                 style={{background: primario}}>
+                <div className="w-[40%] mb-2 p-1 px-2 text-lg" contentEditable>Documento sin título</div>
                 {/* Opciones de menu superior*/}
                 <div className="flex space-x-8 px-2">
                     {
