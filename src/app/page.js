@@ -32,7 +32,7 @@ export default function Home() {
       {/* Luz nocturna */}
       {
         luzNocturna &&
-        <div className="w-screen h-screen fixed top-0 left-0 bg-[#FFB07C] opacity-25"></div>
+        <div className="w-screen h-screen fixed top-0 left-0 bg-[#FFB07C] opacity-25 pointer-events-none"></div>
       }
     </div>
   );
