@@ -1,0 +1,14 @@
+{
+    "light": {
+        "primario": "#",
+        "secundario": "#",
+        "fondo": "#",
+        "texto": "#"
+    },
+    "dark": {
+        "primario": "#",
+        "secundario": "#",
+        "fondo": "#",
+        "texto": "#"
+    }
+}
