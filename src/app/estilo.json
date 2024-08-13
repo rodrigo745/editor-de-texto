@@ -1,5 +1,6 @@
 {
     "light": {
+        "id": 0,
         "primario": "#B3B9C1",
         "secundario": "#77726E",
         "fondo": "#CACBCD",
@@ -7,6 +8,7 @@
         "hoja": "#F6F2EE"
     },
     "dark": {
+        "id": 1,
         "primario": "#5D7283",
         "secundario": "#77726E",
         "fondo": "#323841",
