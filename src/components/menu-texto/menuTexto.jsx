@@ -48,7 +48,7 @@ export default function MenuTexto({primario, texto, secundario, hoja}){
 
                     Cambiar los estilos de las letras y colores
                 */}
-                <div className="bg-slate-600 rounded-sm shadow-sm">
+                <div className="rounded-sm shadow-sm" style={{background: secundario, color: texto}}>
                     <div className="px-4 mt-4 p-2 flex space-x-2">
                         <button className="font-bold rounded-md cursor-pointer px-3 py-1 border-2 border-slate-500 w-fit" onClick={()=> aplicarBold("b")}>B</button>
                         <p className="font-bold cursor-pointer px-3 py-1 border-b-2 border-slate-500 w-fit">U</p>
