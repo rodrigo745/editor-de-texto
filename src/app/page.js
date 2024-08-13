@@ -8,20 +8,19 @@ import estilo from "./estilo.json";
 
 export default function Home() {
 
-  const [ estiloGeneral, setEstiloGeneral ] = useState();
-  const { primario, secundario, fondo, texto, hoja } = estilo.light;
-  const primarioo = `bg-[#${primario}]`;
+  const [ estiloGeneral, setEstiloGeneral ] = useState(estilo.light);
+  const { primario, secundario, fondo, texto, hoja } = estiloGeneral;
 
   console.log(`bg-[#${primario}]`)
 
   return (
-    <div className="px-5 flex justify-center pt-10"
-      style={{background: fondo}}>
-      <MenuGeneral/>
+    <div className="px-5 flex justify-center pt-10 pb-10"
+      style={{background: fondo, color: texto}}>
+      <MenuGeneral secundario={secundario}/>
       <div className="w-[60%]">
-        <MenuTexto estilo={estilo}/>
-        <div className={`h-screen mt-10`} style={{
-          background: primario
+        <MenuTexto primario={primario}/>
+        <div className="h-screen mt-10 rounded-md shadow-md p-2" style={{
+          background: hoja
         }}>
           Texto: {estilo.dark.primario}
         </div>
