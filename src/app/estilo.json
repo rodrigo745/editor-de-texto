@@ -1,14 +1,16 @@
 {
     "light": {
-        "primario": "#",
-        "secundario": "#",
-        "fondo": "#",
-        "texto": "#"
+        "primario": "#B3B9C1",
+        "secundario": "#77726E",
+        "fondo": "#CACBCD",
+        "texto": "#323841",
+        "hoja": "#F6F2EE"
     },
     "dark": {
-        "primario": "#",
-        "secundario": "#",
-        "fondo": "#",
-        "texto": "#"
+        "primario": "#CACBCD",
+        "secundario": "#77726E",
+        "fondo": "#323841",
+        "texto": "#F6F2EE",
+        "hoja": "#B3B9C1"
     }
 }
