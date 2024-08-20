@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 
-
-
 /* btn modo oscuro */
 .theme-checkbox {
     --toggle-size: 16px;

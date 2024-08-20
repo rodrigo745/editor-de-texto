@@ -9,34 +9,29 @@ export default function MenuTexto({primario, texto, secundario, hoja}){
 
     const aplicarBold = (e)=>{
         const editor = editorRef.current;
+        const seleccion = window.getSelection();
 
-        if(editor){
-            const seleccion = window.getSelection();
-            if(seleccion.rangeCount > 0 ){
-                const rango = seleccion.getRangeAt(0);
-                if (rango.startContainer.nodeType === Node.TEXT_NODE || rango.startContainer.nodeType === Node.ELEMENT_NODE){
-                    const etiqueta = document.createElement(e);
-                    // si la etiqueta ya está aplicada entoces se quita
-                    rango.surroundContents(etiqueta); // encierro la selección en una etiqueta
-                    if(etiqueta.parentElement.tagName == "B"){
-                        // Deselecciono el texto luego de aplicar la etiqueta
-                        seleccion.removeAllRanges();
-                    } else {
-                        rango.surroundContents("p");
-                        seleccion.removeAllRanges();
-                    }
-                }
-            }
+        if(editor && seleccion.rangeCount > 0){
+            const rango = seleccion.getRangeAt(0);
+            const contenidoExtraido = rango.extractContents();
+            const tagBold = document.createElement("strong");
+            const antes = tagBold.innerHTML;
+            tagBold.appendChild(contenidoExtraido);
+            rango.insertNode(tagBold);
+            console.log(antes)
+            console.log(tagBold.innerHTML)
+
+
         }
     }
-
 
 
     return(
         <div>
             <div className="h-[20vh] w-full rounded-md shadow-sm p-2" 
                 style={{background: primario}}>
-                <div className="w-[40%] mb-2 p-1 px-2 text-lg" contentEditable>Documento sin título</div>
+                <style>{`.place::placeholder { color: ${secundario};}`}</style>
+                <input type="text" className={`w-[40%] mb-2 p-1 px-2 text-lg bg-transparent outline-none place`} placeholder="Documento sin título"/>
                 {/* Opciones de menu superior*/}
                 <div className="flex space-x-8 px-2">
                     {

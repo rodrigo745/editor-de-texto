@@ -21,11 +21,11 @@ export default function MenuGeneral({ secundario, cambiarEstilo, addLuzNocturna 
                     </div>
                     <div className="flex justify-between">
                         <p>Modo oscuro</p>
-                        <input onClick={cambiarEstilo} type="checkbox" class="theme-checkbox"/>
+                        <input onClick={cambiarEstilo} type="checkbox" className="theme-checkbox"/>
                     </div>
                     <div className="flex justify-between">
                         <p>Luz nocturna</p>
-                        <input onClick={addLuzNocturna} type="checkbox" class="theme-checkbox"/>
+                        <input onClick={addLuzNocturna} type="checkbox" className="theme-checkbox"/>
 
                     </div>
                 </div>
