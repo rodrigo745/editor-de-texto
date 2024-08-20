@@ -10,16 +10,18 @@ export default function MenuTexto({primario, texto, secundario, hoja}){
     const aplicarBold = (e)=>{
         const editor = editorRef.current;
         const seleccion = window.getSelection();
-
-        if(editor && seleccion.rangeCount > 0){
+        
+        if(editor && seleccion.rangeCount > 0 ){
             const rango = seleccion.getRangeAt(0);
             const contenidoExtraido = rango.extractContents();
             const tagBold = document.createElement("strong");
-            const antes = tagBold.innerHTML;
+            
+            console.log(contenidoExtraido.tagName )
             tagBold.appendChild(contenidoExtraido);
             rango.insertNode(tagBold);
-            console.log(antes)
-            console.log(tagBold.innerHTML)
+            
+            console.log(tagBold.innerHTML.includes())
+            console.log(editor)
 
 
         }
