@@ -1,0 +1,20 @@
+{
+    "light": {
+        "id": 0,
+        "primario": "#B3B9C1",
+        "secundario": "#77726E",
+        "fondo": "#CACBCD",
+        "texto": "#323841",
+        "textoBajo": "#777",
+        "hoja": "#F6F2EE"
+    },
+    "dark": {
+        "id": 1,
+        "primario": "#5D7283",
+        "secundario": "#77726E",
+        "fondo": "#323841",
+        "texto": "#F6F2EE",
+        "textoBajo": "#bbb",
+        "hoja": "#B3B9C1"
+    }
+}
