@@ -4,7 +4,6 @@ import Texto from "../texto/texto";
 export default function MenuTexto({primario, texto, secundario, hoja}){
 
     const editorRef = useRef(null);
-    const arrayBold = [];
 
     const menuSuperior = [ "Archivo", "Insertar", "Ver", "Herramientas", "Formato" ];
 
@@ -16,10 +15,11 @@ export default function MenuTexto({primario, texto, secundario, hoja}){
             const rango = seleccion.getRangeAt(0);
             const contenidoExtraido = rango.extractContents();
             
-            if(contenidoExtraido.querySelector("strong")){
-                
+            if(contenidoExtraido.querySelector("b")){
+                const textSave = contenidoExtraido.textContent;
+                rango.insertNode(document.createTextNode(textSave));
             } else {
-                const tagBold = document.createElement("strong");
+                const tagBold = document.createElement("b");
                 tagBold.appendChild(contenidoExtraido);
                 rango.insertNode(tagBold);
             }
